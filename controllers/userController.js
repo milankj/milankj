@@ -1,7 +1,8 @@
 const User = require('../models/userModel')
-const { getAllTours } = require('./tourController')
-exports.getAllUsers = async (req,res)=>{
-  try{
+const catchAsync = require('../utils/catchAsync')
+
+
+exports.getAllUsers = catchAsync( async (req,res,next)=>{
   const newUser = await User.find()
   res.status(200).json({
     status:"Success",
@@ -10,32 +11,17 @@ exports.getAllUsers = async (req,res)=>{
       user:newUser
     }
   })
-  }catch(err){
-    res.status(500).json(
-      {
-        status:"Error",
-        message:err
-      }
-    )}
-  }
+})
+exports.getUser = catchAsync( async(req,res,next)=>{
+  const user =  await User.findOne({_id:req.params.id})
 
-exports.getUser = async(req,res)=>{
-  try{
-    const user =  await User.findOne({_id:req.params.id})
-
-    res.status(200).json({
-    status:"Success",
-    data:{
-      user
-      }
-    })
-  }catch(err){
-      res.status(404).json({
-        status:"Error",
-        message:err
-      })
+  res.status(200).json({
+  status:"Success",
+  data:{
+    user
     }
-  }
+  })
+})
 
 
 exports.createUser = (req,res)=>{

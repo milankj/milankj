@@ -34,30 +34,37 @@ exports.signup = catchAsync (async(req,res,next)=>{
 })
 exports.protect = async(req,res,next)=>{
     
-    let token
-    //  1. GETTING TOKEN AND CHECK IF ITS THERE
+    let token,decoded
+        //  1. GETTING TOKEN AND CHECK IF ITS THERE
+    
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
         token = req.headers.authorization.split(' ')[1] 
     }
     if(!token){
         return next(new AppError('Not Logged in please log in to get access'))   
     }
-    //  2.VERIFICATION TOKEN
+        
+        //  2.VERIFICATION TOKEN
     try{
-    const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);   
+     decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);   
     console.log(decoded)
     }
     catch(err){
         return next(new AppError(err,500))
     }
-    // catch(err){
-    //     res.status(500).json({
-    //         status:"Access Denied",
-    //         message:err
-    //     })
-    // }
-    //  3.CHECK IF USER STILL EXISTS
-    //  4.CHECK IF USER CHANGED PASSWORD AFTER  TOKEN WAS ISSUED
+    
+        //  3.CHECK IF USER STILL EXISTS
+    const freshUser = await User.findById(decoded.id)
+    if(!freshUser){
+        return next(new AppError('User of this token no longer exits'),401)
+    }
+    
+        //  4.CHECK IF USER CHANGED PASSWORD AFTER  TOKEN WAS ISSUED
+    if(freshUser.changePasswordAfter(decoded.iat)){
+        next(new AppError(''),401)
+    }
+    req.user = freshUser
+    //GRANT ACCESS TO PROTECTED ROUTE
     next()
 }
 exports.login = catchAsync (async (req,res,next)=>{

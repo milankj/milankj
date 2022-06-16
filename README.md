@@ -1,5 +1,4 @@
-<h1 align="center">Hi 👋, I'm Milan K Jain</h1>
-<h3 align="center">I'm a Backend developer</h3>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=F7155C&background=FF288700&lines=Hi+I'm+Milan+K+Jain;I'm+a+Backend+Developer)](https://git.io/typing-svg)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=milankj&label=Profile%20views&color=0e75b6&style=flat" alt="milankj" /> </p>
 

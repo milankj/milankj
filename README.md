@@ -1,4 +1,5 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=F7155C&background=FF288700&lines=Hi+I'm+Milan+K+Jain;I'm+a+Backend+Developer)](https://git.io/typing-svg)
+<h1 style = 'text-align : centre'>Hi I'm Milan K Jain</h1><br>
+<h2>I'm a Backend Developer</h2>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=milankj&label=Profile%20views&color=0e75b6&style=flat" alt="milankj" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=milankj" alt="milankj" /></a> </p>

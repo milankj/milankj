@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Milan K Jain</h1>
-<h3 align="center">I'm a Backend developer</h3>
+<h3 align="center">I'm a MERN stack developer</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=milankj&label=Profile%20views&color=0e75b6&style=flat" alt="milankj" /> </p>
 

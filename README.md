@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **Flutter**
 
-- 💬 Ask me about **node.js,Javascipt,HTML5,CSS**
+- 💬 Ask me about **node.js,Javascipt,HTML5,CSS,React js**
 
 - 📫 How to reach me **milanjain005@gmail.com**
 

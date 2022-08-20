@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Milan K Jain</h1>
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=I'm+a+MERN+Stack+Developer" alt="Typing SVG" style="text-align:center;" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=39FF14&width=435&lines=I'm+a+MERN+Stack+Developer" alt="Typing SVG" /></a>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=milankj&label=Profile%20views&color=0e75b6&style=flat" alt="milankj" /> </p>
 
